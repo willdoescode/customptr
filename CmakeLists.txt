@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.2)
+
+project(customptr CXX)
+set(CXX_STANDARD 20)
+set(CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "-std=c++20")
+
+aux_source_directory(source/ SRC)
+aux_source_directory(include/ INCLUDES)
+
+include_directories(include)
+
+add_executable(${PROJECT_NAME} ${SRC} ${INCLDUES})
